@@ -1,0 +1,7 @@
+/target
+.env
+web/node_modules
+web/yarn.lock
+web/public
+
+Cargo.lock
