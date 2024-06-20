@@ -1,12 +1,9 @@
 -- Your SQL goes here
 CREATE TABLE posts (
   id SERIAL PRIMARY KEY,
-  notes TEXT DEFAULT NULL,
-  overall FLOAT DEFAULT NULL,
-  psychomotor FLOAT DEFAULT NULL,
-  energy FLOAT DEFAULT NULL,
-  mood FLOAT DEFAULT NULL,
-  thoughts_slowed_racing FLOAT DEFAULT NULL,
-  concentration_difficulty FLOAT DEFAULT NULL,
-  time_submitted BIGINT NOT NULL DEFAULT -1
+  userid BIGINT NOT NULL DEFAULT -1,
+  fieldname VARCHAR(128) NOT NULL DEFAULT 'mood',
+  fieldtype VARCHAR(128) NOT NULL DEFAULT 'numerical_rating',
+  fieldval TEXT DEFAULT NULL,
+  timestamp BIGINT NOT NULL DEFAULT -1
 );
